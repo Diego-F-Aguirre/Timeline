@@ -12,8 +12,8 @@ import Foundation
 struct User: Equatable {
     
     let username: String
-    let bio: String?
-    let url: String?
+    var bio: String?
+    var url: String?
     let identifier: String
     
     init(username: String, bio: String?, url: String?, identifier: String) {
