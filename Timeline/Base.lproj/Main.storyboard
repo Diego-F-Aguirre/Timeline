@@ -371,8 +371,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="obf-E0-Ntw"/>
         <segue reference="MoK-6K-AtN"/>
-        <segue reference="hoB-Uu-JxB"/>
         <segue reference="GIG-Ib-f1z"/>
     </inferredMetricsTieBreakers>
 </document>

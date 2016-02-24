@@ -26,6 +26,7 @@
 		BCA108641C7D135100FBC0E8 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA108631C7D135100FBC0E8 /* Post.swift */; };
 		BCA108661C7D165400FBC0E8 /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA108651C7D165400FBC0E8 /* UserController.swift */; };
 		BCA108691C7D241D00FBC0E8 /* PostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA108681C7D241D00FBC0E8 /* PostController.swift */; };
+		BCA1086B1C7D2A7300FBC0E8 /* ImageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA1086A1C7D2A7300FBC0E8 /* ImageController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		BCA108631C7D135100FBC0E8 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		BCA108651C7D165400FBC0E8 /* UserController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
 		BCA108681C7D241D00FBC0E8 /* PostController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostController.swift; sourceTree = "<group>"; };
+		BCA1086A1C7D2A7300FBC0E8 /* ImageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				BCA108651C7D165400FBC0E8 /* UserController.swift */,
+				BCA1086A1C7D2A7300FBC0E8 /* ImageController.swift */,
 				BCA108681C7D241D00FBC0E8 /* PostController.swift */,
 			);
 			name = "Model Controllers";
@@ -321,6 +324,7 @@
 				BCA1084D1C7CFD7F00FBC0E8 /* TimeLineTableViewController.swift in Sources */,
 				BCA108641C7D135100FBC0E8 /* Post.swift in Sources */,
 				01E3FC251BE92C7600187536 /* AppDelegate.swift in Sources */,
+				BCA1086B1C7D2A7300FBC0E8 /* ImageController.swift in Sources */,
 				BCA108661C7D165400FBC0E8 /* UserController.swift in Sources */,
 				BCA108571C7D070600FBC0E8 /* LoginSignUpViewController.swift in Sources */,
 				BCA108601C7D102100FBC0E8 /* Comment.swift in Sources */,
