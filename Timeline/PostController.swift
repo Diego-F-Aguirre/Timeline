@@ -79,9 +79,9 @@ class PostController {
     }
     
     static func mockPosts() -> [Post] {
-        let post1 = Post(imageEndPoint: "ljdaf;", caption: nil, username: "kitkat48", comments: "I am 48 and a doctor", likes: "Yes", identifier: nil)
-        let post2 = Post(imageEndPoint: "djfaslj", caption: "New person here!", username: "helloWorld", comments: "djflajfdlj", likes: "NO", identifier: "djfljadjsfa")
-        let post3 = Post(imageEndPoint: "xjdlsfal", caption: "another social platform", username: "morbid89", comments: "hate this", likes: "Yes", identifier: nil)
+        let post1 = Post(imageEndPoint: "ljdaf;", caption: nil, username: "kitkat48", comments: [], likes: [], identifier: nil)
+        let post2 = Post(imageEndPoint: "djfaslj", caption: "New person here!", username: "helloWorld", comments: [], likes: [], identifier: "djfljadjsfa")
+        let post3 = Post(imageEndPoint: "xjdlsfal", caption: "another social platform", username: "morbid89", comments: [], likes: [], identifier: nil)
         
         return [post1, post2, post3]
         
@@ -89,6 +89,7 @@ class PostController {
     
     
 }
+
 
 
 

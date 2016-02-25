@@ -14,11 +14,11 @@ struct Post: Equatable {
     let imageEndPoint: String
     let caption: String?
     let username: String
-    let comments: [String]
-    let likes: [String]
+    let comments: [Comment]
+    let likes: [Like]
     let identifier: String?
     
-    init(imageEndPoint: String, caption: String?, username: String, comments: String, likes: String, identifier: String?) {
+    init(imageEndPoint: String, caption: String?, username: String, comments: [Comment], likes: [Like]  , identifier: String?) {
         
         self.imageEndPoint = imageEndPoint
         self.caption = nil

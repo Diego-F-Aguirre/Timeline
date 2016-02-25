@@ -9,11 +9,40 @@
 import UIKit
 
 class TimeLineTableViewController: UITableViewController {
+    
+    var posts: [Post]? = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
       
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if let currentUser = UserController.sharedController.currentUser {
+            if posts!.count > 0 {
+                loadTimelineForUser(currentUser)
+            }
+        } else {
+            tabBarController?.performSegueWithIdentifier("noCurrentUserSegue", sender:nil)
+        }
+    }
+    
+    
+    func loadTimelineForUser (user: User) {
+        PostController.fetchTimeLineForUser((user)) { (post) -> Void in
+            if let posts = self.posts {
+                self.posts = posts
+                dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                    self.tableView.reloadData()
+                    self.refreshControl?.endRefreshing()
+                })
+            } else {
+                self.refreshControl?.endRefreshing()
+            }
+        }
     }
 
 
