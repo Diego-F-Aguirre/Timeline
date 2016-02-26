@@ -8,17 +8,19 @@
 
 import UIKit
 
-class UserSearchTableViewController: UITableViewController {
+class UserSearchTableViewController: UITableViewController, UISearchResultsUpdating {
     
     @IBOutlet weak var modeSegmentedControl: UISegmentedControl!
     
     var userDataSource: [User] = []
+    var searchController: UISearchController!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         updateViewBasedOnMode()
+        setUpSearchController()
     }
     
     
@@ -98,6 +100,35 @@ class UserSearchTableViewController: UITableViewController {
         
         
         return cell
+    }
+    
+    // MARK: - SearchController
+    
+    func setUpSearchController() {
+        
+        let resultsViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("resultsVC")
+        
+        searchController = UISearchController(searchResultsController: resultsViewController)
+        searchController.searchResultsUpdater = self
+        searchController.searchBar.sizeToFit()
+        searchController.hidesNavigationBarDuringPresentation = false
+        
+        tableView.tableHeaderView = searchController.searchBar
+        
+        definesPresentationContext = true
+        
+    }
+    
+    func updateSearchResultsForSearchController(searchController: UISearchController) {
+        
+        let searchTerm = searchController.searchBar.text ?? ""
+        let lowerCaseSearchTerm = searchTerm.lowercaseString
+        
+        let resultsViewController = searchController.searchResultsController as! UserSearchResultsTableViewController
+        
+        resultsViewController.usersResultsDataSource = userDataSource.filter({$0.username.lowercaseString.containsString(lowerCaseSearchTerm)})
+        resultsViewController.tableView.reloadData()
+        
     }
     
     
