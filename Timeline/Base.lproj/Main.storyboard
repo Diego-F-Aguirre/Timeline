@@ -157,7 +157,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="dn3-Bu-BJS" kind="show" id="MoK-6K-AtN"/>
+                                    <segue destination="dn3-Bu-BJS" kind="show" identifier="toProfile" id="MoK-6K-AtN"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -478,7 +478,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="obf-E0-Ntw"/>
-        <segue reference="6DO-mt-UfQ"/>
+        <segue reference="GIG-Ib-f1z"/>
         <segue reference="MoK-6K-AtN"/>
     </inferredMetricsTieBreakers>
 </document>

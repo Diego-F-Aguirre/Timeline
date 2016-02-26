@@ -18,8 +18,6 @@ class UserSearchResultsTableViewController: UITableViewController {
        
     }
     
-
-
     // MARK: - Table view data source
 
 
@@ -39,6 +37,12 @@ class UserSearchResultsTableViewController: UITableViewController {
         cell.textLabel?.text = user.username
 
         return cell
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        let cell = tableView.cellForRowAtIndexPath(indexPath)
+        self.presentingViewController?.performSegueWithIdentifier("toProfile", sender: cell)
     }
     
 

@@ -127,7 +127,6 @@
 			children = (
 				01E3FC241BE92C7600187536 /* AppDelegate.swift */,
 				01E3FC281BE92C7600187536 /* Main.storyboard */,
-				BC3838641C7FDDB6006D96D1 /* UserSearchResultsTableViewController.swift */,
 				BCA1085D1C7D0C9000FBC0E8 /* ViewControllers */,
 				BCA1085E1C7D0C9C00FBC0E8 /* Models */,
 				BCA108671C7D165D00FBC0E8 /* Model Controllers */,
@@ -166,6 +165,7 @@
 				BCA108541C7D040000FBC0E8 /* AddPhotoTableViewController.swift */,
 				BCA108561C7D070600FBC0E8 /* LoginSignUpViewController.swift */,
 				BCA108581C7D095400FBC0E8 /* LoginSignUpChoiceViewController.swift */,
+				BC3838641C7FDDB6006D96D1 /* UserSearchResultsTableViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
