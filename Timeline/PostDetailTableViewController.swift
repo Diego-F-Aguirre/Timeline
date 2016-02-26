@@ -9,17 +9,16 @@
 import UIKit
 
 class PostDetailTableViewController: UITableViewController {
+    
+    var post: Post?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        // implement a updateWithPost method that is safely unwrapped 
     }
 
+    
 
 
     // MARK: - Table view data source

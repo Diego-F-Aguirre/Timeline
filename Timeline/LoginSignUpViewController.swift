@@ -19,9 +19,12 @@ class LoginSignUpViewController: UIViewController {
     
    var viewMode: ViewMode = .Signup
     
+    var user: User?
+    
     enum ViewMode {
         case Login
         case Signup
+        case Edit
  
     }
 
@@ -30,7 +33,15 @@ class LoginSignUpViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
-        updateViewBasedOnMode()
+        if let user = user {
+            
+            updateWithUser(user)
+            
+        }
+        
+         updateViewBasedOnMode()
+        
+        
     }
     
      
@@ -40,6 +51,13 @@ class LoginSignUpViewController: UIViewController {
         switch viewMode {
         case .Signup : (usernameTextField.hidden = false, emailTextField.hidden = false, passwordTextField.hidden = false, bioTextField.hidden = false, websiteURLTextField.hidden = false, actionButton.setTitle("Sign Up", forState: .Normal))
         case .Login: (usernameTextField.hidden = true, emailTextField.hidden = false, passwordTextField.hidden = false, bioTextField.hidden = true, websiteURLTextField.hidden = true, actionButton.setTitle("Login", forState: .Normal))
+        case .Edit: (emailTextField.hidden = true, passwordTextField.hidden = true, actionButton.setTitle("Update", forState: .Normal))
+            
+        if let user = self.user {
+            usernameTextField.text = user.username
+            bioTextField.text = user.bio
+            websiteURLTextField.text = user.url
+            }
         }
     }
     
@@ -52,8 +70,15 @@ class LoginSignUpViewController: UIViewController {
                 return !(usernameTextField.text!.isEmpty && emailTextField.text!.isEmpty && passwordTextField.text!.isEmpty)
             case .Login:
                 return !(emailTextField.text!.isEmpty && passwordTextField.text!.isEmpty)
+            case .Edit:
+                return (emailTextField.text?.isEmpty)!
             }
         }
+    }
+    
+    func updateWithUser(user: User) {
+        self.user = user
+        viewMode = .Edit
     }
     
     
@@ -79,7 +104,19 @@ class LoginSignUpViewController: UIViewController {
                         self.presentValidationAlertWithTitle("Unable to Log In", message: "Please re-check your information and try again")
                     }
                 })
+                
+            case .Edit:
+                UserController.updateUser(self.user!, username: self.usernameTextField.text!, bio: self.bioTextField.text, url: self.websiteURLTextField.text, completion: { (success, user) -> Void in
+                    
+                    if success {
+                        self.dismissViewControllerAnimated(true, completion: nil)
+                    } else {
+                        self.presentValidationAlertWithTitle("Unable to Update User", message: "Please check your information and try again.")
+                    }
+                })
             }
+        } else {
+            presentValidationAlertWithTitle("Missing information", message: "Please check your information and try again.")
         }
         
     }

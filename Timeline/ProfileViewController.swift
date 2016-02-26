@@ -11,6 +11,9 @@ import SafariServices
 
 class ProfileViewController: UIViewController, UICollectionViewDataSource, ProfileHeaderCollectionReusableViewDelegate {
     
+    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var editBarButton: UIBarButtonItem!
+    
     var user: User?
     var userPosts: [Post] = []
     
@@ -18,7 +21,16 @@ class ProfileViewController: UIViewController, UICollectionViewDataSource, Profi
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        print(user)
+        if user == nil {
+            user = UserController.sharedController.currentUser
+            editButtonItem().enabled = true
+        }
+        
+        
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
     }
     
     func updateBasedOnUser() {
@@ -33,7 +45,7 @@ class ProfileViewController: UIViewController, UICollectionViewDataSource, Profi
             }
             
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
-//                self.collectinView
+                //                self.collectinView.reloadData()
             })
         }
         
@@ -50,7 +62,7 @@ class ProfileViewController: UIViewController, UICollectionViewDataSource, Profi
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("profileCell", forIndexPath: indexPath) as! ImageCollectionViewCell
         
         let post = userPosts[indexPath.item]
-     
+        
         cell.updateWithImageIdentifier(post.imageEndPoint)
         
         return cell
@@ -104,14 +116,46 @@ class ProfileViewController: UIViewController, UICollectionViewDataSource, Profi
     
     
     
-    /*
     // MARK: - Navigation
-    
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    // Get the new view controller using segue.destinationViewController.
-    // Pass the selected object to the new view controller.
+        
+        
+        if segue.identifier == "toEditProfile" {
+            
+            let destinationViewController  = segue.destinationViewController as? LoginSignUpViewController
+            destinationViewController?.user = user
+            
+        } else if segue.identifier == "profileToPostDetail" {
+            
+            if let cell = sender as? UICollectionViewCell, let indexPath = collectionView.indexPathForCell(cell) {
+                
+                let post = userPosts[indexPath.item]
+                
+                let destinationViewController = segue.destinationViewController as? PostDetailTableViewController
+                
+                destinationViewController?.post = post
+                
+                
+            }
+        }
     }
-    */
+   
     
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
