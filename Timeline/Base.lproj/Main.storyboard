@@ -136,20 +136,34 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="SKd-8i-8Av">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="UAp-Bh-zeL">
-                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="itemSize" width="200" height="200"/>
                                     <size key="headerReferenceSize" width="50" height="50"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="5F2-MV-cAM">
-                                        <rect key="frame" x="0.0" y="114" width="50" height="50"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="profileCell" id="5F2-MV-cAM" customClass="ImageCollectionViewCell" customModule="Timeline" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="114" width="200" height="200"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TOK-OF-STa">
+                                                    <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                                </imageView>
+                                            </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="TOK-OF-STa" secondAttribute="trailing" id="OdW-Uu-bXS"/>
+                                            <constraint firstItem="TOK-OF-STa" firstAttribute="top" secondItem="5F2-MV-cAM" secondAttribute="top" id="hhB-CW-Jvt"/>
+                                            <constraint firstAttribute="bottom" secondItem="TOK-OF-STa" secondAttribute="bottom" id="meB-rR-gbi"/>
+                                            <constraint firstItem="TOK-OF-STa" firstAttribute="leading" secondItem="5F2-MV-cAM" secondAttribute="leading" id="usu-Lu-KqM"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="imageView" destination="TOK-OF-STa" id="vUC-vZ-bfW"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="reuseHeader" id="iQU-pE-lb5" customClass="ProfileHeaderCollectionReusableView" customModule="Timeline" customModuleProvider="target">
@@ -551,8 +565,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="obf-E0-Ntw"/>
-        <segue reference="GIG-Ib-f1z"/>
         <segue reference="MoK-6K-AtN"/>
+        <segue reference="GIG-Ib-f1z"/>
+        <segue reference="hoB-Uu-JxB"/>
     </inferredMetricsTieBreakers>
 </document>

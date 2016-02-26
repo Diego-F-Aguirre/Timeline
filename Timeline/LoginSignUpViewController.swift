@@ -33,7 +33,7 @@ class LoginSignUpViewController: UIViewController {
         updateViewBasedOnMode()
     }
     
-    
+     
     
     func updateViewBasedOnMode() {
         
