@@ -39,6 +39,8 @@ class UserSearchResultsTableViewController: UITableViewController {
         return cell
     }
     
+    //MARK: Table view delegate
+    
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
         let cell = tableView.cellForRowAtIndexPath(indexPath)

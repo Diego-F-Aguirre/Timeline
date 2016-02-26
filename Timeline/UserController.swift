@@ -42,7 +42,7 @@ class UserController {
         
     }
     
-    static func userFollowsUser(user: User, otherUser: User, completion: (checkIfEqual: Bool) -> Void) {
+    static func userFollowsUser(user: User, otherUser: User, completion: (follows: Bool) -> Void) {
         
         
         
