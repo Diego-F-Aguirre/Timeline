@@ -224,7 +224,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="iQR-50-Hi1">
-                        <barButtonItem key="leftBarButtonItem" title="Logout" id="jzL-pP-i0O"/>
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="jzL-pP-i0O">
+                            <connections>
+                                <action selector="userTappedLogoutButton:" destination="dn3-Bu-BJS" id="fpA-Ol-UM8"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="edit" id="axR-gS-iVA">
                             <connections>
                                 <segue destination="x4u-vZ-fLy" kind="presentation" identifier="toEditProfile" id="xW9-vH-QdD"/>
@@ -238,7 +242,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OKA-Yw-GV8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3763" y="-362"/>
+            <point key="canvasLocation" x="3623" y="-418"/>
         </scene>
         <!--User Search Table View Controller-->
         <scene sceneID="I1N-Us-fSu">
@@ -305,7 +309,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QUU-kk-F1t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3013" y="106"/>
+            <point key="canvasLocation" x="2889" y="408"/>
         </scene>
         <!--Login Sign Up Choice View Controller-->
         <scene sceneID="XzV-KS-Akv">
@@ -428,7 +432,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xgb-wQ-gDB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2279" y="380"/>
+            <point key="canvasLocation" x="2059" y="408"/>
         </scene>
         <!--Friends-->
         <scene sceneID="zte-hB-bbz">
@@ -577,8 +581,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="3fN-sF-4vb"/>
+        <segue reference="obf-E0-Ntw"/>
+        <segue reference="MoK-6K-AtN"/>
         <segue reference="xW9-vH-QdD"/>
-        <segue reference="hoB-Uu-JxB"/>
     </inferredMetricsTieBreakers>
 </document>

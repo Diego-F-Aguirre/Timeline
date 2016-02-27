@@ -51,6 +51,14 @@ class ProfileViewController: UIViewController, UICollectionViewDataSource, Profi
         
     }
     
+    @IBAction func userTappedLogoutButton(sender: AnyObject) {
+        
+        
+        self.user = nil
+        self.tabBarController?.selectedViewController = tabBarController?.viewControllers![0]
+    }
+    
+    
     
     // MARK: DataSource
     
