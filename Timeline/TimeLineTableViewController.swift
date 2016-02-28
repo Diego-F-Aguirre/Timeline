@@ -10,6 +10,8 @@ import UIKit
 
 class TimeLineTableViewController: UITableViewController {
     
+    
+    
     var posts: [Post]? = []
 
     override func viewDidLoad() {
@@ -112,14 +114,49 @@ class TimeLineTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "toDetailView" {
+            
+            if let cell = sender as? UITableViewCell, let indexPath = tableView.indexPathForCell(cell) {
+                
+                let post = posts![indexPath.row]
+                
+                let destinationController = segue.destinationViewController as! PostDetailTableViewController
+                
+                destinationController.post = post
+            }
+        }
+        
     }
-    */
+    
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
