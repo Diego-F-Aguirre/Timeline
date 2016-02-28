@@ -48,25 +48,34 @@ class TimeLineTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return posts!.count
     }
 
-    /*
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("postCell", forIndexPath: indexPath) as! PostTableViewCell
 
         // Configure the cell...
+        
+        let post = posts![indexPath.row]
+        
+        cell.updateWithPost(post)
 
         return cell
     }
-    */
+    
+    // MARK: Refresh Control
+    
+    @IBAction func userRefreshedTable(sender: AnyObject) {
+        
+        loadTimelineForUser(UserController.sharedController.currentUser)
+        
+    }
+    
+    
 
     /*
     // Override to support conditional editing of the table view.

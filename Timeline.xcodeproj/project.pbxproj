@@ -16,6 +16,7 @@
 		BC3838651C7FDDB6006D96D1 /* UserSearchResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3838641C7FDDB6006D96D1 /* UserSearchResultsTableViewController.swift */; };
 		BC3838671C800880006D96D1 /* ProfileHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3838661C800880006D96D1 /* ProfileHeaderCollectionReusableView.swift */; };
 		BC3838691C801488006D96D1 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3838681C801488006D96D1 /* ImageCollectionViewCell.swift */; };
+		BC3838891C82A0F9006D96D1 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3838881C82A0F9006D96D1 /* PostTableViewCell.swift */; };
 		BCA1084D1C7CFD7F00FBC0E8 /* TimeLineTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA1084C1C7CFD7F00FBC0E8 /* TimeLineTableViewController.swift */; };
 		BCA1084F1C7CFE1B00FBC0E8 /* PostDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA1084E1C7CFE1B00FBC0E8 /* PostDetailTableViewController.swift */; };
 		BCA108511C7D008300FBC0E8 /* UserSearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA108501C7D008300FBC0E8 /* UserSearchTableViewController.swift */; };
@@ -65,6 +66,7 @@
 		BC3838641C7FDDB6006D96D1 /* UserSearchResultsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSearchResultsTableViewController.swift; sourceTree = "<group>"; };
 		BC3838661C800880006D96D1 /* ProfileHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 		BC3838681C801488006D96D1 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		BC3838881C82A0F9006D96D1 /* PostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		BCA1084C1C7CFD7F00FBC0E8 /* TimeLineTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeLineTableViewController.swift; sourceTree = "<group>"; };
 		BCA1084E1C7CFE1B00FBC0E8 /* PostDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostDetailTableViewController.swift; sourceTree = "<group>"; };
 		BCA108501C7D008300FBC0E8 /* UserSearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSearchTableViewController.swift; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 				BC3838641C7FDDB6006D96D1 /* UserSearchResultsTableViewController.swift */,
 				BC3838661C800880006D96D1 /* ProfileHeaderCollectionReusableView.swift */,
 				BC3838681C801488006D96D1 /* ImageCollectionViewCell.swift */,
+				BC3838881C82A0F9006D96D1 /* PostTableViewCell.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -333,6 +336,7 @@
 				BCA1084D1C7CFD7F00FBC0E8 /* TimeLineTableViewController.swift in Sources */,
 				BC3838651C7FDDB6006D96D1 /* UserSearchResultsTableViewController.swift in Sources */,
 				BCA108641C7D135100FBC0E8 /* Post.swift in Sources */,
+				BC3838891C82A0F9006D96D1 /* PostTableViewCell.swift in Sources */,
 				01E3FC251BE92C7600187536 /* AppDelegate.swift in Sources */,
 				BC3838691C801488006D96D1 /* ImageCollectionViewCell.swift in Sources */,
 				BCA1086B1C7D2A7300FBC0E8 /* ImageController.swift in Sources */,

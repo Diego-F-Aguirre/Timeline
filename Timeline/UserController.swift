@@ -13,7 +13,7 @@ class UserController {
     
     static let sharedController = UserController()
     
-    var currentUser: User! //= UserController.mockUsers().first
+    var currentUser: User! = UserController.mockUsers().first
     
 
     
