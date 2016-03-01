@@ -27,12 +27,12 @@ struct Comment: Equatable, FirebaseType {
         return [kPost: postIdentifier, kUsername : username, kText : text]
     }
     
-    init(username: String, text: String, postIdentifier: String, identifier: String?) {
+    init(username: String, text: String, postIdentifier: String, identifier: String? = nil) {
         
         self.username = username
         self.text = text
         self.postIdentifier = postIdentifier
-        self.identifier = nil
+        self.identifier = identifier
     }
     
     init?(json: [String : AnyObject], identifier: String) {

@@ -12,7 +12,7 @@ import UIKit
 
 class ImageController {
     
-    static func uploadImage(image: String, completion: (identifier: String) -> Void) {
+    static func uploadImage(image: UIImage, completion: (identifier: String?) -> Void) {
         
         completion(identifier: "-K1l4125TYvKMc7rcp5e")
         
@@ -22,6 +22,7 @@ class ImageController {
         
         completion(image: UIImage(named: "MockPhoto"))
     }
+    
     
     
     

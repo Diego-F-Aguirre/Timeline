@@ -35,11 +35,11 @@ struct Like: Equatable, FirebaseType {
         
     }
     
-    init(username: String, postIdentifier: String, identifier: String?) {
+    init(username: String, postIdentifier: String, identifier: String? = nil) {
         
         self.username = username
         self.postIdentifier = postIdentifier
-        self.identifier = nil
+        self.identifier = identifier
     }
     
 }
