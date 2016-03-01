@@ -71,7 +71,7 @@ class ProfileViewController: UIViewController, UICollectionViewDataSource, Profi
         
         let post = userPosts[indexPath.item]
         
-        cell.updateWithImageIdentifier(post.imageEndPoint)
+        cell.updateWithImageIdentifier(post.imageEndpoint)
         
         return cell
     }

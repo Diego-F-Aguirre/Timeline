@@ -57,7 +57,7 @@ class PostDetailTableViewController: UITableViewController {
         
         self.post = post
         
-        ImageController.imageForIdentifier(post.imageEndPoint) { (image) -> Void in
+        ImageController.imageForIdentifier(post.imageEndpoint) { (image) -> Void in
             self.headerImageView.image = image
         }
         
